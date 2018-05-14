@@ -13,6 +13,9 @@
 		0150F7F920AA03E50071D65A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F7F820AA03E50071D65A /* main.m */; };
 		0150F80320AA06EC0071D65A /* DOBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F80220AA06EC0071D65A /* DOBaseTableView.m */; };
 		0150F80B20AA08E00071D65A /* DOTypesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F80A20AA08E00071D65A /* DOTypesVC.m */; };
+		0150F80F20AA0BC00071D65A /* DOTypesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F80E20AA0BC00071D65A /* DOTypesTableView.m */; };
+		0150F81220AA0BD00071D65A /* DOTypesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F81120AA0BD00071D65A /* DOTypesCell.m */; };
+		0150F81520AA0C770071D65A /* DOTypesCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F81420AA0C770071D65A /* DOTypesCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		0150F80920AA08E00071D65A /* DOTypesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypesVC.h; sourceTree = "<group>"; };
 		0150F80A20AA08E00071D65A /* DOTypesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypesVC.m; sourceTree = "<group>"; };
 		0150F80C20AA09B60071D65A /* NetworkDownload.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkDownload.pch; sourceTree = "<group>"; };
+		0150F80D20AA0BC00071D65A /* DOTypesTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypesTableView.h; sourceTree = "<group>"; };
+		0150F80E20AA0BC00071D65A /* DOTypesTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypesTableView.m; sourceTree = "<group>"; };
+		0150F81020AA0BD00071D65A /* DOTypesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypesCell.h; sourceTree = "<group>"; };
+		0150F81120AA0BD00071D65A /* DOTypesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypesCell.m; sourceTree = "<group>"; };
+		0150F81320AA0C770071D65A /* DOTypesCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypesCellModel.h; sourceTree = "<group>"; };
+		0150F81420AA0C770071D65A /* DOTypesCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypesCellModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +123,10 @@
 		0150F80720AA08750071D65A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0150F80D20AA0BC00071D65A /* DOTypesTableView.h */,
+				0150F80E20AA0BC00071D65A /* DOTypesTableView.m */,
+				0150F81020AA0BD00071D65A /* DOTypesCell.h */,
+				0150F81120AA0BD00071D65A /* DOTypesCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +134,8 @@
 		0150F80820AA087D0071D65A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0150F81320AA0C770071D65A /* DOTypesCellModel.h */,
+				0150F81420AA0C770071D65A /* DOTypesCellModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0150F7F920AA03E50071D65A /* main.m in Sources */,
+				0150F81520AA0C770071D65A /* DOTypesCellModel.m in Sources */,
+				0150F80F20AA0BC00071D65A /* DOTypesTableView.m in Sources */,
+				0150F81220AA0BD00071D65A /* DOTypesCell.m in Sources */,
 				0150F80320AA06EC0071D65A /* DOBaseTableView.m in Sources */,
 				0150F7EB20AA03E40071D65A /* AppDelegate.m in Sources */,
 				0150F80B20AA08E00071D65A /* DOTypesVC.m in Sources */,
