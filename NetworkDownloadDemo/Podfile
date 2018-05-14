@@ -1,0 +1,5 @@
+platform :ios, '9.0'
+
+target 'NetworkDownloadDemo' do
+  pod 'MBProgressHUD'
+end

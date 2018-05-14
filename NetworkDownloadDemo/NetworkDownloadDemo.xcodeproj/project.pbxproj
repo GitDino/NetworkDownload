@@ -21,6 +21,7 @@
 		0150F82320AA11150071D65A /* DOConnectionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F82220AA11150071D65A /* DOConnectionTableView.m */; };
 		0150F82620AA11290071D65A /* DOConnectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F82520AA11290071D65A /* DOConnectionCell.m */; };
 		0150F82A20AA12630071D65A /* DOConnectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F82920AA12630071D65A /* DOConnectionCellModel.m */; };
+		0F1E530CB548005F281C5AB3 /* libPods-NetworkDownloadDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 667AAAFFECB17CE1180E0B27 /* libPods-NetworkDownloadDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,9 @@
 		0150F82520AA11290071D65A /* DOConnectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOConnectionCell.m; sourceTree = "<group>"; };
 		0150F82820AA12630071D65A /* DOConnectionCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOConnectionCellModel.h; sourceTree = "<group>"; };
 		0150F82920AA12630071D65A /* DOConnectionCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOConnectionCellModel.m; sourceTree = "<group>"; };
+		61759F502AD994B5998055E1 /* Pods-NetworkDownloadDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDownloadDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDownloadDemo/Pods-NetworkDownloadDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		667AAAFFECB17CE1180E0B27 /* libPods-NetworkDownloadDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkDownloadDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9777D996B6CCD104502C894 /* Pods-NetworkDownloadDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDownloadDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkDownloadDemo/Pods-NetworkDownloadDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F1E530CB548005F281C5AB3 /* libPods-NetworkDownloadDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +76,8 @@
 			children = (
 				0150F7E820AA03E40071D65A /* NetworkDownloadDemo */,
 				0150F7E720AA03E40071D65A /* Products */,
+				241E4378B36F2A1DDAC2BF78 /* Pods */,
+				A48B407CEFDB126FFBD9AC7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,6 +220,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		241E4378B36F2A1DDAC2BF78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61759F502AD994B5998055E1 /* Pods-NetworkDownloadDemo.debug.xcconfig */,
+				E9777D996B6CCD104502C894 /* Pods-NetworkDownloadDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A48B407CEFDB126FFBD9AC7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				667AAAFFECB17CE1180E0B27 /* libPods-NetworkDownloadDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,6 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0150F7FC20AA03E50071D65A /* Build configuration list for PBXNativeTarget "NetworkDownloadDemo" */;
 			buildPhases = (
+				7E09BEB618C7E1137B02ECBE /* [CP] Check Pods Manifest.lock */,
 				0150F7E220AA03E40071D65A /* Sources */,
 				0150F7E320AA03E40071D65A /* Frameworks */,
 				0150F7E420AA03E40071D65A /* Resources */,
@@ -276,6 +301,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E09BEB618C7E1137B02ECBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkDownloadDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0150F7E220AA03E40071D65A /* Sources */ = {
@@ -423,16 +469,14 @@
 		};
 		0150F7FD20AA03E50071D65A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61759F502AD994B5998055E1 /* Pods-NetworkDownloadDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NetworkDownloadDemo/Bases/NetworkDownload.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/NetworkDownloadDemo/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dino.NetworkDownloadDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -441,16 +485,14 @@
 		};
 		0150F7FE20AA03E50071D65A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9777D996B6CCD104502C894 /* Pods-NetworkDownloadDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NetworkDownloadDemo/Bases/NetworkDownload.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/NetworkDownloadDemo/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dino.NetworkDownloadDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
