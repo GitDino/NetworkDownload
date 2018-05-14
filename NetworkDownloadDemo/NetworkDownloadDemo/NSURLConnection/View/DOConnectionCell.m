@@ -31,7 +31,8 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
     {
-        
+        _progress_view = [[UIProgressView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH * 0.5, 21, SCREEN_WIDTH * 0.5 - 12, 2)];
+        [self.contentView addSubview:_progress_view];
     }
     return self;
 }
@@ -42,6 +43,8 @@
     _cell_model = cell_model;
     
     self.textLabel.text = _cell_model.cell_title;
+    
+    _progress_view.hidden = _cell_model.type == ConnectionTypeDelegate ? NO : YES;
 }
 
 @end

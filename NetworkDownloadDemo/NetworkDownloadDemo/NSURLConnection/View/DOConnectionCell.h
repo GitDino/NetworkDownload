@@ -11,6 +11,8 @@
 
 @interface DOConnectionCell : UITableViewCell
 
+@property (nonatomic, strong) UIProgressView *progress_view;
+
 @property (nonatomic, strong) DOConnectionCellModel *cell_model;
 
 + (instancetype)connectionCellWithTableView:(UITableView *) tableView;

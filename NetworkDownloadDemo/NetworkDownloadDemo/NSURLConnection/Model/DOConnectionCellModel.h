@@ -19,6 +19,8 @@ typedef NS_ENUM(NSUInteger, ConnectionType) {
 
 @property (nonatomic, assign) ConnectionType type;
 
+@property (nonatomic, assign) float progress;
+
 + (instancetype)connectionCellModelWithTitle:(NSString *) cell_title type:(ConnectionType) type;
 
 @end

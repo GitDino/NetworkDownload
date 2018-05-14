@@ -45,6 +45,22 @@
     [self reloadData];
 }
 
+- (void)refreshData:(NSMutableArray *)data_array indexSection:(NSInteger)section indexRow:(NSInteger)row
+{
+    if (self.data_array == nil)
+    {
+        self.data_array = data_array;
+    }
+    else
+    {
+        [self.data_array removeAllObjects];
+        [self.data_array addObjectsFromArray:data_array];
+    }
+    
+    NSIndexPath *index_path = [NSIndexPath indexPathForRow:row inSection:section];
+    [self reloadRowsAtIndexPaths:[NSArray arrayWithObjects:index_path, nil] withRowAnimation:UITableViewRowAnimationNone];
+}
+
 - (id)obtainDataWithIndex:(NSIndexPath *)indexPath
 {
     return self.data_array[indexPath.row];

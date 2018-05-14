@@ -12,6 +12,8 @@
 
 - (void)refreshData:(NSMutableArray *) data_array;
 
+- (void)refreshData:(NSMutableArray *) data_array indexSection:(NSInteger) section indexRow:(NSInteger) row;
+
 - (id)obtainDataWithIndex:(NSIndexPath *) indexPath;
 
 - (NSArray *)obtainDataArray;
