@@ -19,6 +19,10 @@
  */
 #define Desktop_Path @"/Users/weixinyu/Desktop/TestCache/"
 
+#define MovieFile_URL @"http://p82bz62it.bkt.clouddn.com/BigBuck.m4v"
+
+#import <MBProgressHUD.h>
+
 #endif
 
 #endif /* NetworkDownload_pch */

@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) NSMutableArray *data_array;
 
+@property (nonatomic, strong) MBProgressHUD *progress_HUD;
+
 @end
 
 @implementation DOConnectionVC
@@ -51,7 +53,7 @@
         DOConnectionCellModel *cell_model = data_array[indexPath.row];
         switch (cell_model.type) {
             case ConnectionTypeBlock:
-                [strongSelf blockDownloadWithURL:[NSURL URLWithString:@""]];
+                [strongSelf blockDownloadWithURL:[NSURL URLWithString:MovieFile_URL]];
                 break;
             case ConnectionTypeDelegate:
                 
@@ -66,8 +68,25 @@
 #pragma mark - -------------------- Block 方式 --------------------
 - (void)blockDownloadWithURL:(NSURL *) url
 {
+    __weak typeof(self) weakSelf = self;
+    self.progress_HUD = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:self.progress_HUD];
+    self.progress_HUD.label.text = @"正在下载...";
+    self.progress_HUD.mode = MBProgressHUDModeText;
+    [self.progress_HUD showAnimated:YES];
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [strongSelf.progress_HUD hideAnimated:YES];
+        });
+        if (!connectionError)
+        {
+            [data writeToFile:[Desktop_Path stringByAppendingString:response.suggestedFilename] atomically:YES];
+        }
+        else
+        {
+            NSLog(@"下载出错：%@", connectionError);
+        }
     }];
 }
 
