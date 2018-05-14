@@ -14,6 +14,11 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+/**
+ 桌面TestCache文件路径
+ */
+#define Desktop_Path @"/Users/weixinyu/Desktop/TestCache/"
+
 #endif
 
 #endif /* NetworkDownload_pch */

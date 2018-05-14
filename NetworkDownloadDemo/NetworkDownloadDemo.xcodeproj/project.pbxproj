@@ -18,6 +18,9 @@
 		0150F81520AA0C770071D65A /* DOTypesCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F81420AA0C770071D65A /* DOTypesCellModel.m */; };
 		0150F81C20AA0F1E0071D65A /* DOConnectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F81B20AA0F1E0071D65A /* DOConnectionVC.m */; };
 		0150F81F20AA0F2C0071D65A /* DOSessionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F81E20AA0F2C0071D65A /* DOSessionVC.m */; };
+		0150F82320AA11150071D65A /* DOConnectionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F82220AA11150071D65A /* DOConnectionTableView.m */; };
+		0150F82620AA11290071D65A /* DOConnectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F82520AA11290071D65A /* DOConnectionCell.m */; };
+		0150F82A20AA12630071D65A /* DOConnectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F82920AA12630071D65A /* DOConnectionCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,12 @@
 		0150F81B20AA0F1E0071D65A /* DOConnectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOConnectionVC.m; sourceTree = "<group>"; };
 		0150F81D20AA0F2C0071D65A /* DOSessionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSessionVC.h; sourceTree = "<group>"; };
 		0150F81E20AA0F2C0071D65A /* DOSessionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSessionVC.m; sourceTree = "<group>"; };
+		0150F82120AA11150071D65A /* DOConnectionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOConnectionTableView.h; sourceTree = "<group>"; };
+		0150F82220AA11150071D65A /* DOConnectionTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOConnectionTableView.m; sourceTree = "<group>"; };
+		0150F82420AA11290071D65A /* DOConnectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOConnectionCell.h; sourceTree = "<group>"; };
+		0150F82520AA11290071D65A /* DOConnectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOConnectionCell.m; sourceTree = "<group>"; };
+		0150F82820AA12630071D65A /* DOConnectionCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOConnectionCellModel.h; sourceTree = "<group>"; };
+		0150F82920AA12630071D65A /* DOConnectionCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOConnectionCellModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +160,8 @@
 		0150F81620AA0EAD0071D65A /* NSURLConnection */ = {
 			isa = PBXGroup;
 			children = (
+				0150F82720AA12500071D65A /* Model */,
+				0150F82020AA10F60071D65A /* View */,
 				0150F81820AA0EE10071D65A /* Controller */,
 			);
 			path = NSURLConnection;
@@ -180,6 +191,26 @@
 				0150F81E20AA0F2C0071D65A /* DOSessionVC.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		0150F82020AA10F60071D65A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0150F82120AA11150071D65A /* DOConnectionTableView.h */,
+				0150F82220AA11150071D65A /* DOConnectionTableView.m */,
+				0150F82420AA11290071D65A /* DOConnectionCell.h */,
+				0150F82520AA11290071D65A /* DOConnectionCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0150F82720AA12500071D65A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0150F82820AA12630071D65A /* DOConnectionCellModel.h */,
+				0150F82920AA12630071D65A /* DOConnectionCellModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,10 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0150F82620AA11290071D65A /* DOConnectionCell.m in Sources */,
 				0150F7F920AA03E50071D65A /* main.m in Sources */,
+				0150F82A20AA12630071D65A /* DOConnectionCellModel.m in Sources */,
 				0150F81520AA0C770071D65A /* DOTypesCellModel.m in Sources */,
 				0150F80F20AA0BC00071D65A /* DOTypesTableView.m in Sources */,
 				0150F81220AA0BD00071D65A /* DOTypesCell.m in Sources */,
+				0150F82320AA11150071D65A /* DOConnectionTableView.m in Sources */,
 				0150F80320AA06EC0071D65A /* DOBaseTableView.m in Sources */,
 				0150F7EB20AA03E40071D65A /* AppDelegate.m in Sources */,
 				0150F81F20AA0F2C0071D65A /* DOSessionVC.m in Sources */,
