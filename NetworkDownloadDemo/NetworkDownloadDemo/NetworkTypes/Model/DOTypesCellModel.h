@@ -12,4 +12,8 @@
 
 @property (nonatomic, copy) NSString *cell_title;
 
+@property (nonatomic, assign) Class push_class;
+
++ (instancetype)typesCellModelWithTitle:(NSString *) cell_title pushClass:(Class) push_class;
+
 @end

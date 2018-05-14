@@ -10,4 +10,12 @@
 
 @implementation DOTypesCellModel
 
++ (instancetype)typesCellModelWithTitle:(NSString *) cell_title pushClass:(Class) push_class
+{
+    DOTypesCellModel *cell_model = [[DOTypesCellModel alloc] init];
+    cell_model.cell_title = cell_title;
+    cell_model.push_class = push_class;
+    return cell_model;
+}
+
 @end

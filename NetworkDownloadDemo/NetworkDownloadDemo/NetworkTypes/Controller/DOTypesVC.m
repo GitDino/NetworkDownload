@@ -7,6 +7,9 @@
 //
 
 #import "DOTypesVC.h"
+#import "DOConnectionVC.h"
+#import "DOSessionVC.h"
+
 #import "DOTypesTableView.h"
 #import "DOTypesCellModel.h"
 
@@ -28,6 +31,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self configSubViews];
+    
+    [self configAboutBlock];
 }
 
 #pragma mark - Custom Cycle
@@ -35,6 +40,18 @@
 {
     [self.view addSubview:self.types_tableView];
     [self.types_tableView refreshData:self.data_array];
+}
+
+- (void)configAboutBlock
+{
+    __weak typeof(self) weakSelf = self;
+    self.types_tableView.clickIndexCellBlock = ^(NSIndexPath *indexPath, NSMutableArray *data_array) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        DOTypesCellModel *cell_model = data_array[indexPath.row];
+        UIViewController *push_vc = [[[cell_model push_class] alloc] init];
+        push_vc.title = cell_model.cell_title;
+        [strongSelf.navigationController pushViewController:push_vc animated:YES];
+    };
 }
 
 #pragma mark - Getter Cycle
@@ -51,10 +68,8 @@
 {
     if (!_data_array)
     {
-        DOTypesCellModel *cell_model1 = [[DOTypesCellModel alloc] init];
-        cell_model1.cell_title = @"NSURLConnection下载学习";
-        DOTypesCellModel *cell_model2 = [[DOTypesCellModel alloc] init];
-        cell_model2.cell_title = @"NSURLSession下载学习";
+        DOTypesCellModel *cell_model1 = [DOTypesCellModel typesCellModelWithTitle:@"NSURLConnection下载学习" pushClass:[DOConnectionVC class]];
+        DOTypesCellModel *cell_model2 = [DOTypesCellModel typesCellModelWithTitle:@"NSURLSession下载学习" pushClass:[DOSessionVC class]];
         
         NSArray *temp_array = @[cell_model1, cell_model2];
         

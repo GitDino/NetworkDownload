@@ -16,6 +16,8 @@
 		0150F80F20AA0BC00071D65A /* DOTypesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F80E20AA0BC00071D65A /* DOTypesTableView.m */; };
 		0150F81220AA0BD00071D65A /* DOTypesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F81120AA0BD00071D65A /* DOTypesCell.m */; };
 		0150F81520AA0C770071D65A /* DOTypesCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F81420AA0C770071D65A /* DOTypesCellModel.m */; };
+		0150F81C20AA0F1E0071D65A /* DOConnectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F81B20AA0F1E0071D65A /* DOConnectionVC.m */; };
+		0150F81F20AA0F2C0071D65A /* DOSessionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F81E20AA0F2C0071D65A /* DOSessionVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		0150F81120AA0BD00071D65A /* DOTypesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypesCell.m; sourceTree = "<group>"; };
 		0150F81320AA0C770071D65A /* DOTypesCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypesCellModel.h; sourceTree = "<group>"; };
 		0150F81420AA0C770071D65A /* DOTypesCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypesCellModel.m; sourceTree = "<group>"; };
+		0150F81A20AA0F1E0071D65A /* DOConnectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOConnectionVC.h; sourceTree = "<group>"; };
+		0150F81B20AA0F1E0071D65A /* DOConnectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOConnectionVC.m; sourceTree = "<group>"; };
+		0150F81D20AA0F2C0071D65A /* DOSessionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSessionVC.h; sourceTree = "<group>"; };
+		0150F81E20AA0F2C0071D65A /* DOSessionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSessionVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				0150F80520AA08340071D65A /* NetworkTypes */,
+				0150F81620AA0EAD0071D65A /* NSURLConnection */,
+				0150F81720AA0EC30071D65A /* NSURLSession */,
 				0150F80020AA055A0071D65A /* Bases */,
 				0150F7FF20AA05490071D65A /* Resources */,
 			);
@@ -138,6 +146,40 @@
 				0150F81420AA0C770071D65A /* DOTypesCellModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0150F81620AA0EAD0071D65A /* NSURLConnection */ = {
+			isa = PBXGroup;
+			children = (
+				0150F81820AA0EE10071D65A /* Controller */,
+			);
+			path = NSURLConnection;
+			sourceTree = "<group>";
+		};
+		0150F81720AA0EC30071D65A /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				0150F81920AA0EEC0071D65A /* Controller */,
+			);
+			path = NSURLSession;
+			sourceTree = "<group>";
+		};
+		0150F81820AA0EE10071D65A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0150F81A20AA0F1E0071D65A /* DOConnectionVC.h */,
+				0150F81B20AA0F1E0071D65A /* DOConnectionVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0150F81920AA0EEC0071D65A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0150F81D20AA0F2C0071D65A /* DOSessionVC.h */,
+				0150F81E20AA0F2C0071D65A /* DOSessionVC.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +257,9 @@
 				0150F81220AA0BD00071D65A /* DOTypesCell.m in Sources */,
 				0150F80320AA06EC0071D65A /* DOBaseTableView.m in Sources */,
 				0150F7EB20AA03E40071D65A /* AppDelegate.m in Sources */,
+				0150F81F20AA0F2C0071D65A /* DOSessionVC.m in Sources */,
 				0150F80B20AA08E00071D65A /* DOTypesVC.m in Sources */,
+				0150F81C20AA0F1E0071D65A /* DOConnectionVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
