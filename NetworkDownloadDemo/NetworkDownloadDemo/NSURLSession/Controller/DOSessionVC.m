@@ -7,6 +7,7 @@
 //  压缩、解压的框架 SSZipArchive
 
 #import "DOSessionVC.h"
+#import "DODownloadVC.h"
 #import "DOSessionTableView.h"
 #import "DOSessionCellModel.h"
 
@@ -56,7 +57,8 @@
                 break;
             case SessionTypeDelegate: //断点下载
             {
-                
+                DODownloadVC *download_vc = [[DODownloadVC alloc] init];
+                [strongSelf.navigationController pushViewController:download_vc animated:YES];
             }
                 break;
                 
