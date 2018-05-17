@@ -54,8 +54,10 @@
             case SessionTypeBlock:
                 [strongSelf blockDownloadWithURL:[NSURL URLWithString:MovieFile_URL]];
                 break;
-            case SessionTypeDelegate:
+            case SessionTypeDelegate: //断点下载
+            {
                 
+            }
                 break;
                 
             default:
@@ -111,7 +113,7 @@
     if (!_data_array)
     {
         DOSessionCellModel *cell_model1 = [DOSessionCellModel sessionCellModelWithTitle:@"Block 下载" type:SessionTypeBlock];
-        DOSessionCellModel *cell_model2 = [DOSessionCellModel sessionCellModelWithTitle:@"Delegate 下载" type:SessionTypeDelegate];
+        DOSessionCellModel *cell_model2 = [DOSessionCellModel sessionCellModelWithTitle:@"断点下载" type:SessionTypeDelegate];
         
         NSArray *temp_array = @[cell_model1, cell_model2];
         
