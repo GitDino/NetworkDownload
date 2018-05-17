@@ -59,20 +59,35 @@
     }
     
     switch (self.load_state) {
-        case DownloadStateFinish:
-            [self.operate_btn setTitle:@"下载" forState:UIControlStateNormal];
-            break;
-            
         case DownloadStateStart:
-            [self.operate_btn setTitle:@"继续" forState:UIControlStateNormal];
+            [self.operate_btn setTitle:@"下载" forState:UIControlStateNormal];
             break;
             
         case DownloadStatePause:
             [self.operate_btn setTitle:@"暂停" forState:UIControlStateNormal];
             break;
             
+        case DownloadStateContinue:
+            [self.operate_btn setTitle:@"继续" forState:UIControlStateNormal];
+            break;
+            
         default:
             break;
+    }
+}
+
+#pragma mark - Setter Cycle
+- (void)setLoad_progress:(CGFloat)load_progress
+{
+    _load_progress = load_progress;
+    
+    self.progress_view.progress = _load_progress;
+    self.progress_label.text = [NSString stringWithFormat:@"%.02f%%", _load_progress * 100];
+    
+    if (_load_progress == 1.0)
+    {
+        self.load_state = DownloadStateStart;
+        [self.operate_btn setTitle:@"下载" forState:UIControlStateNormal];
     }
 }
 

@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, DownloadState) {
-    DownloadStateStart,
-    DownloadStatePause,
-    DownloadStateFinish
+    DownloadStateStart,   //开始
+    DownloadStatePause,   //暂停
+    DownloadStateContinue  //继续
 };
 
 typedef void(^operationBlock)(DownloadState load_state);
@@ -21,6 +21,8 @@ typedef void(^operationBlock)(DownloadState load_state);
 @property (nonatomic, assign) DownloadState load_state;
 
 @property (nonatomic, copy) operationBlock operationBlock;
+
+@property (nonatomic, assign) CGFloat load_progress;
 
 + (instancetype)downloadView;
 
