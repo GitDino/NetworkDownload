@@ -8,6 +8,7 @@
 
 #import "DOSessionVC.h"
 #import "DODownloadVC.h"
+#import "DOBackgroundVC.h"
 #import "DOSessionTableView.h"
 #import "DOSessionCellModel.h"
 
@@ -52,13 +53,21 @@
         __strong typeof(weakSelf) strongSelf = weakSelf;
         DOSessionCellModel *cell_model = data_array[indexPath.row];
         switch (cell_model.type) {
-            case SessionTypeBlock:
+            case SessionTypeBlock: //Block 下载
                 [strongSelf blockDownloadWithURL:[NSURL URLWithString:MovieFile_URL]];
                 break;
+                
             case SessionTypeDelegate: //断点下载
             {
                 DODownloadVC *download_vc = [[DODownloadVC alloc] init];
                 [strongSelf.navigationController pushViewController:download_vc animated:YES];
+            }
+                break;
+                
+            case SessionTypeBackground: //后台下载
+            {
+                DOBackgroundVC *background_vc = [[DOBackgroundVC alloc] init];
+                [strongSelf.navigationController pushViewController:background_vc animated:YES];
             }
                 break;
                 
@@ -116,8 +125,9 @@
     {
         DOSessionCellModel *cell_model1 = [DOSessionCellModel sessionCellModelWithTitle:@"Block 下载" type:SessionTypeBlock];
         DOSessionCellModel *cell_model2 = [DOSessionCellModel sessionCellModelWithTitle:@"断点下载" type:SessionTypeDelegate];
+        DOSessionCellModel *cell_model3 = [DOSessionCellModel sessionCellModelWithTitle:@"后台下载" type:SessionTypeBackground];
         
-        NSArray *temp_array = @[cell_model1, cell_model2];
+        NSArray *temp_array = @[cell_model1, cell_model2, cell_model3];
         
         _data_array = [NSMutableArray array];
         [_data_array addObjectsFromArray:temp_array];
