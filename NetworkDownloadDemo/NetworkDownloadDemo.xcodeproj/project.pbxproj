@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		013BBFEB20AD1B27005AD3E6 /* DOSessionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013BBFEA20AD1B27005AD3E6 /* DOSessionTableView.m */; };
+		013BBFEE20AD1B43005AD3E6 /* DOSessionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 013BBFED20AD1B43005AD3E6 /* DOSessionCell.m */; };
+		013BBFF120AD1BBF005AD3E6 /* DOSessionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 013BBFF020AD1BBF005AD3E6 /* DOSessionCellModel.m */; };
 		0150F7EB20AA03E40071D65A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F7EA20AA03E40071D65A /* AppDelegate.m */; };
 		0150F7F320AA03E50071D65A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0150F7F220AA03E50071D65A /* Assets.xcassets */; };
 		0150F7F620AA03E50071D65A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0150F7F420AA03E50071D65A /* LaunchScreen.storyboard */; };
@@ -25,6 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		013BBFE920AD1B27005AD3E6 /* DOSessionTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSessionTableView.h; sourceTree = "<group>"; };
+		013BBFEA20AD1B27005AD3E6 /* DOSessionTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSessionTableView.m; sourceTree = "<group>"; };
+		013BBFEC20AD1B43005AD3E6 /* DOSessionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSessionCell.h; sourceTree = "<group>"; };
+		013BBFED20AD1B43005AD3E6 /* DOSessionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSessionCell.m; sourceTree = "<group>"; };
+		013BBFEF20AD1BBF005AD3E6 /* DOSessionCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSessionCellModel.h; sourceTree = "<group>"; };
+		013BBFF020AD1BBF005AD3E6 /* DOSessionCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSessionCellModel.m; sourceTree = "<group>"; };
 		0150F7E620AA03E40071D65A /* NetworkDownloadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkDownloadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0150F7E920AA03E40071D65A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0150F7EA20AA03E40071D65A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,6 +80,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		013BBFE720AD1B0A005AD3E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				013BBFE920AD1B27005AD3E6 /* DOSessionTableView.h */,
+				013BBFEA20AD1B27005AD3E6 /* DOSessionTableView.m */,
+				013BBFEC20AD1B43005AD3E6 /* DOSessionCell.h */,
+				013BBFED20AD1B43005AD3E6 /* DOSessionCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		013BBFE820AD1B14005AD3E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				013BBFEF20AD1BBF005AD3E6 /* DOSessionCellModel.h */,
+				013BBFF020AD1BBF005AD3E6 /* DOSessionCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0150F7DD20AA03E40071D65A = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +206,8 @@
 		0150F81720AA0EC30071D65A /* NSURLSession */ = {
 			isa = PBXGroup;
 			children = (
+				013BBFE820AD1B14005AD3E6 /* Model */,
+				013BBFE720AD1B0A005AD3E6 /* View */,
 				0150F81920AA0EEC0071D65A /* Controller */,
 			);
 			path = NSURLSession;
@@ -329,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0150F82620AA11290071D65A /* DOConnectionCell.m in Sources */,
+				013BBFEB20AD1B27005AD3E6 /* DOSessionTableView.m in Sources */,
 				0150F7F920AA03E50071D65A /* main.m in Sources */,
 				0150F82A20AA12630071D65A /* DOConnectionCellModel.m in Sources */,
 				0150F81520AA0C770071D65A /* DOTypesCellModel.m in Sources */,
@@ -338,8 +370,10 @@
 				0150F80320AA06EC0071D65A /* DOBaseTableView.m in Sources */,
 				0150F7EB20AA03E40071D65A /* AppDelegate.m in Sources */,
 				0150F81F20AA0F2C0071D65A /* DOSessionVC.m in Sources */,
+				013BBFF120AD1BBF005AD3E6 /* DOSessionCellModel.m in Sources */,
 				0150F80B20AA08E00071D65A /* DOTypesVC.m in Sources */,
 				0150F81C20AA0F1E0071D65A /* DOConnectionVC.m in Sources */,
+				013BBFEE20AD1B43005AD3E6 /* DOSessionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
