@@ -12,7 +12,6 @@
 		013BBFF120AD1BBF005AD3E6 /* DOSessionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 013BBFF020AD1BBF005AD3E6 /* DOSessionCellModel.m */; };
 		013BBFF420AD4EF2005AD3E6 /* DODownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 013BBFF320AD4EF2005AD3E6 /* DODownloadVC.m */; };
 		013BBFF720AD4F04005AD3E6 /* DODownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013BBFF620AD4F04005AD3E6 /* DODownloadView.m */; };
-		013BBFFA20AD790E005AD3E6 /* DOBackgroundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 013BBFF920AD790E005AD3E6 /* DOBackgroundVC.m */; };
 		0150F7EB20AA03E40071D65A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150F7EA20AA03E40071D65A /* AppDelegate.m */; };
 		0150F7F320AA03E50071D65A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0150F7F220AA03E50071D65A /* Assets.xcassets */; };
 		0150F7F620AA03E50071D65A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0150F7F420AA03E50071D65A /* LaunchScreen.storyboard */; };
@@ -41,8 +40,6 @@
 		013BBFF320AD4EF2005AD3E6 /* DODownloadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DODownloadVC.m; sourceTree = "<group>"; };
 		013BBFF520AD4F04005AD3E6 /* DODownloadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DODownloadView.h; sourceTree = "<group>"; };
 		013BBFF620AD4F04005AD3E6 /* DODownloadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DODownloadView.m; sourceTree = "<group>"; };
-		013BBFF820AD790E005AD3E6 /* DOBackgroundVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOBackgroundVC.h; sourceTree = "<group>"; };
-		013BBFF920AD790E005AD3E6 /* DOBackgroundVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOBackgroundVC.m; sourceTree = "<group>"; };
 		0150F7E620AA03E40071D65A /* NetworkDownloadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkDownloadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0150F7E920AA03E40071D65A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0150F7EA20AA03E40071D65A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -240,8 +237,6 @@
 				0150F81E20AA0F2C0071D65A /* DOSessionVC.m */,
 				013BBFF220AD4EF2005AD3E6 /* DODownloadVC.h */,
 				013BBFF320AD4EF2005AD3E6 /* DODownloadVC.m */,
-				013BBFF820AD790E005AD3E6 /* DOBackgroundVC.h */,
-				013BBFF920AD790E005AD3E6 /* DOBackgroundVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -377,7 +372,6 @@
 				0150F82620AA11290071D65A /* DOConnectionCell.m in Sources */,
 				013BBFEB20AD1B27005AD3E6 /* DOSessionTableView.m in Sources */,
 				013BBFF720AD4F04005AD3E6 /* DODownloadView.m in Sources */,
-				013BBFFA20AD790E005AD3E6 /* DOBackgroundVC.m in Sources */,
 				0150F7F920AA03E50071D65A /* main.m in Sources */,
 				0150F82A20AA12630071D65A /* DOConnectionCellModel.m in Sources */,
 				0150F81520AA0C770071D65A /* DOTypesCellModel.m in Sources */,

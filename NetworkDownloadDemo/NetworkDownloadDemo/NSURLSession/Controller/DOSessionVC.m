@@ -8,7 +8,6 @@
 
 #import "DOSessionVC.h"
 #import "DODownloadVC.h"
-#import "DOBackgroundVC.h"
 #import "DOSessionTableView.h"
 #import "DOSessionCellModel.h"
 
@@ -61,13 +60,6 @@
             {
                 DODownloadVC *download_vc = [[DODownloadVC alloc] init];
                 [strongSelf.navigationController pushViewController:download_vc animated:YES];
-            }
-                break;
-                
-            case SessionTypeBackground: //后台下载
-            {
-                DOBackgroundVC *background_vc = [[DOBackgroundVC alloc] init];
-                [strongSelf.navigationController pushViewController:background_vc animated:YES];
             }
                 break;
                 
@@ -125,9 +117,8 @@
     {
         DOSessionCellModel *cell_model1 = [DOSessionCellModel sessionCellModelWithTitle:@"Block 下载" type:SessionTypeBlock];
         DOSessionCellModel *cell_model2 = [DOSessionCellModel sessionCellModelWithTitle:@"断点下载" type:SessionTypeDelegate];
-        DOSessionCellModel *cell_model3 = [DOSessionCellModel sessionCellModelWithTitle:@"后台下载" type:SessionTypeBackground];
         
-        NSArray *temp_array = @[cell_model1, cell_model2, cell_model3];
+        NSArray *temp_array = @[cell_model1, cell_model2];
         
         _data_array = [NSMutableArray array];
         [_data_array addObjectsFromArray:temp_array];
